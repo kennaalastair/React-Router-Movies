@@ -6,7 +6,7 @@ const SavedList = props => (
     {props.list.map(movie => (
       <span className="saved-movie">{movie.title}</span>
     ))}
-    <div className="home-button">Home</div>
+    <div onClick={() => props.history.push('/')} className="home-button">Home</div>
   </div>
 );
 
