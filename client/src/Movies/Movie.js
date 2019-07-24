@@ -6,7 +6,7 @@ import MovieCard from './MovieCard';
 
 const Movie = (props) => {
   console.log('props', props)
-  const [movie, setMovie] = useState();
+  const [movie, setMovie] = useState(null);
   const id = props.match.params.id;
 
   useEffect(() => {
@@ -32,9 +32,7 @@ const Movie = (props) => {
   }
 
   return (
-    <div className="save-wrapper">
-      <MovieCard movie={movie}/>
-    </div>
+      <MovieCard movie={movie} {...props} />
   );
 }
 
